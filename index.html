@@ -26,20 +26,21 @@
             
             <h3>Attendance List:</h3>
 
-            <details>
-                <summary></summary>
+            <nav>
+                <details>
+                    <summary></summary>
 
-                <ul>
-                    <nav>
-                        <li>Ike Okoye | <a href="https://github.com/ikeywikey" target="_blank">@ikeywikey</a></li>
-                        <li>Barack Obama | @obamaobama</li>
-                        <li>Bugs Bunny | @whatsupdoc</li>
-                        <li>LeBron James | @thegoat</li>
-                        <li>Another guy | @idek</li>
-                    </nav>
-                </ul>
+                    <ul>
+                        
+                            <li>Ike Okoye | <a href="https://github.com/ikeywikey" target="_blank">@ikeywikey</a></li>
+                            <li>Barack Obama | @obamaobama</li>
+                            <li>Bugs Bunny | @whatsupdoc</li>
+                            <li>LeBron James | @thegoat</li>
+                            <li>Another guy | @idek</li>
+                    </ul>
 
-            </details>
+                </details>
+            </nav>
 
             
 
@@ -127,14 +128,14 @@
 
         <fieldset>
 
-            <label for="radio_test">Test1:</label>
-            <input type="radio" id="radio_test" name="radio_test">
+            <label for="radio_1">Test1:</label>
+            <input type="radio" id="radio_1" name="radio_test">
 
-            <label for="radio_test">Test2:</label>
-            <input type="radio" id="radio_test" name="radio_test">
+            <label for="radio_2">Test2:</label>
+            <input type="radio" id="radio_2" name="radio_test">
 
-            <label for="radio_test">Test3:</label>
-            <input type="radio" id="radio_test" name="radio_test"><br>
+            <label for="radio_3">Test3:</label>
+            <input type="radio" id="radio_3" name="radio_test"><br>
 
         </fieldset><br>
         
@@ -147,7 +148,7 @@
         <br>
 
         <label for="textarea_test">Long text:</label>
-        <textarea name="textarea_test">Enter text here...</textarea>
+        <textarea id="textarea_test" name="textarea_test">Enter text here...</textarea>
 
         <br>
         <br>
@@ -162,7 +163,7 @@
         <fieldset>
             <label for="fav_lang">Favorite coding language?</label>
 
-            <input list="languages">
+            <input list="languages" id="fav_lang">
 
             <datalist id="languages">
                 <option value="Python">
@@ -176,7 +177,7 @@
         <fieldset>
             <label for="fav_class">Favorite class?</label>
 
-            <select id="classes">
+            <select id="fav_class">
                 <option value="1">CSE 110</option>
                 <option value="2">CSE 110...</option>
                 <option value="3">...yes, CSE 110</option>
