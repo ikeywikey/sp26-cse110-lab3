@@ -1,0 +1,244 @@
+/* meeting minutes stylesheet */
+
+:root {
+    --footer-color: color(display-p3 1 0 0);
+    --form-color: rgb(98, 28, 28);
+    --accent: coral;
+    --max-content-width: 900px;
+}
+
+* {
+    color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+input, textarea, select {
+    color: black;
+}
+
+body {
+    background-color: hsl(0, 0%, 13%);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    max-width: var(--max-content-width);
+    min-width: 320px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+summary {
+    color: color-mix(in srgb, rgb(255, 255, 255) 50%, rgb(255, 73, 73) 50%);
+    font-weight: bold;
+    text-decoration: darkred underline double;
+    cursor: pointer;
+}
+
+/* center attendance list items */
+details > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    list-style-position: inside;
+}
+
+.main-title {
+    border: 2px solid white;
+    margin: 50px 10px 50px 10px;
+    padding: 20px 20px 20px 20px;
+    font-size: 50px;
+    text-align: center;
+    position: relative;
+
+    & small {
+        font-size: 0.6em;
+        opacity: 0.8;
+    }
+}
+
+.title {
+    margin: auto;
+    text-align: center;
+}
+
+.small-title {
+    font-size: 1.2rem;
+}
+
+#media-title {
+    border: 2px solid white;
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+form {
+    /* fallback */
+    background-color: var(--form-color, rgb(26, 26, 26));
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    border-radius: 5px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+}
+
+img {
+    display: block;
+    width: 40%;
+    margin: 20px auto;
+}
+
+button {
+    background-color: darkred;
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+button:hover {
+    background-color: hsla(0, 80%, 40%, 0.9);
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(0.97);
+}
+
+/* style external links differently */
+a[target="_blank"] {
+    text-decoration: underline dotted;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+video.vids {
+    height: 100px;
+    width: 100%;
+    display: block;
+}
+
+audio {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+label + input {
+    margin-left: 0.5em;
+}
+
+hr ~ section {
+    margin-top: 1rem;
+}
+
+/* three content sections */
+.sections-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-auto-rows: minmax(150px, auto);
+    margin: 20px 0;
+    border-top: 3mm solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+}
+
+.sections-grid > section:has(ul) {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1em;
+
+    & h3 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 0.5em;
+        margin-bottom: 0.5em;
+    }
+}
+
+fieldset:has(input[type="radio"]) {
+    border-color: rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+}
+
+/* floats in the corner. always visible while scrolling */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: darkred;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+#back-to-top:hover {
+    background-color: crimson;
+}
+
+#footer-msg {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 14pt;
+}
+
+#footer-msg p i {
+    color: var(--footer-color);
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .sections-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+        margin: 20px 5px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    body {
+        width: 100%;
+        padding: 0 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    #media-title {
+        font-size: 1.5rem;
+    }
+}
